@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %} Доска Объявлений {% endblock %}
+
+{% block content %}
+    <h3>Rubrik: {{ current_rubric.name }}</h3>
+
+    {% include "board/components/list_boards.html" %}
+    
+{% endblock %}

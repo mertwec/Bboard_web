@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset= "UTF-8">
+        <title>
+            {% block title %} Main {% endblock %}
+        </title>
+
+        <link rel="stylesheet" type="text/css" 
+        href="{% static 'board/styles.css' %}">
+
+    </head>
+
+    <body>
+        <h1> {% block name %} Объявления {% endblock %} </h1>
+        <nav>
+            -{% include "navigation.html" %}-
+        </nav>
+        <section>
+            {% block content %}
+            <div>
+                <p>ЗдЕся мАгла бЫть ваЩа риКлама</p>
+            </div>
+            {% endblock %}
+        </section>
+    </body>
+</html>

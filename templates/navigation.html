@@ -1,0 +1,11 @@
+
+<div>
+    <a href="{% url 'index' %}"> Главная </a>/
+    <a href="{% url 'add' %}"> Добавить объяву </a>/
+    <br>
+
+    {% for rubric in rubrics %}
+        <a href= "{% url 'by_rubric' rubric.pk %}"> {{rubric.name}} </a>/
+    {% endfor %}
+</div>
+<br>
